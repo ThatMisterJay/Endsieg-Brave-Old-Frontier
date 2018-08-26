@@ -1,0 +1,280 @@
+﻿###########################
+# Whalecoming Events
+###########################
+
+add_namespace = difficultyselection
+
+# rations
+country_event = {
+	id = difficultyselection.1
+	title = difficultyselection.1.t
+	desc = difficultyselection.1.d
+	picture = GFX_report_event_welcome_1910
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { factor = 0 }
+		name = difficultyselection.1.a
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+		}
+		ROOT = {
+			add_equipment_to_stockpile = { type = rations_1 amount = 250000 }
+			if = {
+				limit = { ROOT = { NOT = { has_idea = cheap_rations } } }
+				ROOT = { add_ideas = cheap_rations }
+			}
+		}
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = difficultyselection.1.b
+		ROOT = {
+			add_equipment_to_stockpile = { type = rations_1 amount = 250000 }
+		}
+		hidden_effect = { ROOT = { country_event = { id = difficultyselection.2 } } }
+	}
+	option = {
+		name = difficultyselection.1.c
+		ai_chance = { factor = 100 }
+		hidden_effect = { ROOT = { country_event = { id = difficultyselection.2 } } }
+	}
+}
+
+# Cheat Menu
+country_event = {
+	id = difficultyselection.2
+	title = difficultyselection.2.t
+	desc = difficultyselection.2.d
+	#picture = GFX_report_event_welcome_1910
+
+	is_triggered_only = yes
+
+	option = { # Difficulty
+		name = difficultyselection.2.b
+		ai_chance = { factor = 0 }
+		hidden_effect = { ROOT = { country_event = { id = difficultyselection.3 } } }
+	}
+	option = { # reinforce rate
+		name = difficultyselection.2.c
+		ai_chance = { factor = 0 }
+		hidden_effect = { ROOT = { country_event = { id = difficultyselection.4 } } }
+	}
+	option = { # Set Rations
+		name = difficultyselection.2.a
+		ai_chance = { factor = 0 }
+		hidden_effect = { ROOT = { country_event = { id = difficultyselection.1 } } }
+	}
+	option = { # Im done
+		name = difficultyselection.2.dee
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Difficulty
+country_event = {
+	id = difficultyselection.3
+	title = difficultyselection.3.t
+	desc = difficultyselection.3.d
+	#picture = GFX_report_event_welcome_1910
+
+	is_triggered_only = yes
+
+	option = { # easy
+		name = difficultyselection.3.a
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = easy_mode } }
+				ROOT = { remove_ideas = easy_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = hard_mode } }
+				ROOT = { remove_ideas = hard_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = extreme_hard_mode } }
+				ROOT = { remove_ideas = extreme_hard_mode }
+			}
+		}
+		ROOT = { add_ideas = easy_mode }
+	}
+	option = { # normal
+		name = difficultyselection.3.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = easy_mode } }
+				ROOT = { remove_ideas = easy_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = hard_mode } }
+				ROOT = { remove_ideas = hard_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = extreme_hard_mode } }
+				ROOT = { remove_ideas = extreme_hard_mode }
+			}
+		}
+	}
+	option = { # hard
+		name = difficultyselection.3.c
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = easy_mode } }
+				ROOT = { remove_ideas = easy_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = hard_mode } }
+				ROOT = { remove_ideas = hard_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = extreme_hard_mode } }
+				ROOT = { remove_ideas = extreme_hard_mode }
+			}
+		}
+		ROOT = { add_ideas = hard_mode }
+	}
+	option = { # sparta
+		name = difficultyselection.3.dee
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = easy_mode } }
+				ROOT = { remove_ideas = easy_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = hard_mode } }
+				ROOT = { remove_ideas = hard_mode }
+			}
+			if = {
+				limit = { ROOT = { has_idea = extreme_hard_mode } }
+				ROOT = { remove_ideas = extreme_hard_mode }
+			}
+		}
+		ROOT = { add_ideas = extreme_hard_mode }
+	}
+}
+
+# Reinforce rate
+country_event = {
+	id = difficultyselection.4
+	title = difficultyselection.4.t
+	desc = difficultyselection.4.d
+	#picture = GFX_report_event_welcome_1910
+
+	is_triggered_only = yes
+
+	option = { # normal
+		name = difficultyselection.4.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_easy } }
+				ROOT = { remove_ideas = reinforce_rate_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_super_easy } }
+				ROOT = { remove_ideas = reinforce_rate_super_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_baby } }
+				ROOT = { remove_ideas = reinforce_rate_baby }
+			}
+		}
+	}
+	option = { # easy
+		name = difficultyselection.4.b
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_easy } }
+				ROOT = { remove_ideas = reinforce_rate_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_super_easy } }
+				ROOT = { remove_ideas = reinforce_rate_super_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_baby } }
+				ROOT = { remove_ideas = reinforce_rate_baby }
+			}
+		}
+		ROOT = { add_ideas = reinforce_rate_easy }
+	}
+	option = { # super easy
+		name = difficultyselection.4.c
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_easy } }
+				ROOT = { remove_ideas = reinforce_rate_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_super_easy } }
+				ROOT = { remove_ideas = reinforce_rate_super_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_baby } }
+				ROOT = { remove_ideas = reinforce_rate_baby }
+			}
+		}
+		ROOT = { add_ideas = reinforce_rate_super_easy }
+	}
+	option = { # baby
+		name = difficultyselection.4.dee
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			ROOT = { country_event = { id = difficultyselection.2 } }
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_easy } }
+				ROOT = { remove_ideas = reinforce_rate_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_super_easy } }
+				ROOT = { remove_ideas = reinforce_rate_super_easy }
+			}
+			if = {
+				limit = { ROOT = { has_idea = reinforce_rate_baby } }
+				ROOT = { remove_ideas = reinforce_rate_baby }
+			}
+		}
+		ROOT = { add_ideas = reinforce_rate_baby }
+	}
+}
+
+# event for all nations
+country_event = {
+	id = difficultyselection.5
+	title = difficultyselection.5.t
+	desc = difficultyselection.5.d
+	#picture = GFX_report_event_welcome_1910
+
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		OR = {
+			tag = URG
+			tag = UR1
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = difficultyselection.5.a
+		every_country = {
+			country_event = { id = difficultyselection.2 }
+		}
+	}
+}
