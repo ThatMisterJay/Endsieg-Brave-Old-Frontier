@@ -1,0 +1,8 @@
+﻿l_english:
+
+###### Resources ######
+PRODUCTION_MATERIALS_GRAIN:0 "Grain"
+grain_desc:0 "Grain is needed to produce Rations."
+rations_1:0 "Rations"
+rations_desc:0 "Rations are required to upkeep your army. Without them, your men will not be able to fight."
+#######################
