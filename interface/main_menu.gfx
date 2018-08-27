@@ -1,0 +1,85 @@
+spriteTypes = {
+
+	### Main menu gfx ###
+
+	SpriteType = {
+		name = "GFX_mainmenu_bottom_bg"
+		texturefile = "gfx/main_menu/frontend_bottom_bg.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_continue_bg"
+		texturefile = "gfx/main_menu/frontend_continue_bg.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_continue_button"
+		texturefile = "gfx/main_menu/frontend_continue_button.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_custom_nation"
+		texturefile = "gfx/main_menu/frontend_custom_nation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_mp_button"
+		texturefile = "gfx/main_menu/frontend_mp_button.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_panel_button_center"
+		texturefile = "gfx/main_menu/frontend_panel_button_center.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_panel_button_left"
+		texturefile = "gfx/main_menu/frontend_panel_button_left.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_panel_button_right"
+		texturefile = "gfx/main_menu/frontend_panel_button_right.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_random_nation"
+		texturefile = "gfx/main_menu/frontend_random_nation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_random_world"
+		texturefile = "gfx/main_menu/frontend_random_world.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_small_frame"
+		texturefile = "gfx/main_menu/frontend_small_frame.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_sp_button"
+		texturefile = "gfx/main_menu/frontend_sp_button.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_mainmenu_icon_homepage"
+		texturefile = "gfx/main_menu/icon_homepage.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_icon_forum"
+		texturefile = "gfx/main_menu/icon_forum.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_icon_facebook"
+		texturefile = "gfx/main_menu/icon_facebook.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_icon_twitter"
+		texturefile = "gfx/main_menu/icon_twitter.dds"
+	}
+}
