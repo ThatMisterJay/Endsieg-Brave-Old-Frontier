@@ -33,6 +33,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_mainmenu_panel_button_center_extra_wide"
+		texturefile = "gfx/main_menu/frontend_panel_button_center_extra_wide.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_mainmenu_panel_button_left"
 		texturefile = "gfx/main_menu/frontend_panel_button_left.dds"
 	}
@@ -81,5 +86,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_mainmenu_icon_twitter"
 		texturefile = "gfx/main_menu/icon_twitter.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mainmenu_mode_selection"
+		texturefile = "gfx/main_menu/lobby_right_bg.dds"
 	}
 }
